@@ -3,6 +3,8 @@ capybara-*.html
 .rspec
 /db/*.sqlite3
 /db/*.sqlite3-journal
+/db/*.sqlite3-shm
+/db/*.sqlite3-wal
 /db/*.sqlite3-[0-9]*
 /public/system
 /coverage/

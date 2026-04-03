@@ -9,7 +9,7 @@ services:
     environment:
       - RAILS_ENV=development
       - JWT_SECRET_KEY=dev-secret-key-change-in-production
-    command: bash -c "rails db:create db:migrate && rails server -b 0.0.0.0"
+    command: bash -c "bundle install && rails db:create db:migrate && rails server -b 0.0.0.0"
 
   test:
     build: .
@@ -19,7 +19,7 @@ services:
     environment:
       - RAILS_ENV=test
       - JWT_SECRET_KEY=test-secret-key
-    command: bash -c "rails db:create db:migrate && bundle exec rspec"
+    command: bash -c "bundle install && rails db:create db:migrate && bundle exec rspec"
     profiles:
       - test
 
